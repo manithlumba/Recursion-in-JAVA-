@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class GCD {
+    // Recursive method to find GCD
+    public int findGCD(int a, int b) {
+        if (b == 0) {
+            return a;
+        }
+        return findGCD(b, a % b);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter two numbers: ");
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+
+        GCD obj = new GCD();
+        int result = obj.findGCD(num1, num2);
+        System.out.println("GCD is: " + result);
+    }
+}
